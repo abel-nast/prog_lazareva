@@ -1,6 +1,7 @@
 class Mother:
     def print(self):
         print(self.voice())
+
     def voice(self):
         return "Вставай, тебе на пары!"
 
