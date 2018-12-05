@@ -17,7 +17,7 @@ def balls():
 
 def counter(event):
     global x, y, r, s
-    while x-r/2 <= event.x <= x+r and y-r/2 <= event.y <= y+r and s < 10:
+    while x-r/2 <= event.x <= x+r and y-r/2 <= event.y <= y+r:
         s += 1
         canv.delete(ALL)
         canv.create_text(775, 575, text=s, font='Arial 25')
