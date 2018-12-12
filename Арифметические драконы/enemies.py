@@ -69,4 +69,25 @@ class BlackDragon(Dragon):
         return self.__quest
 
 
-enemy_types = [GreenDragon, RedDragon, BlackDragon]
+class Troll(Enemy):
+    def set_answer(self, answer):
+        self.__answer = answer
+
+    def check_answer(self, answer):
+        return answer == self.__answer
+
+
+class PinkTroll(Troll):
+    def __init__(self):
+        self._health = 300
+        self._attack = 20
+        self._color = 'розовый'
+
+    def question(self):
+        x = randint(1, 5)
+        self.__quest = 'Загадано число от 1 до 5'
+        self.set_answer(x)
+        return self.__quest
+
+
+enemy_types = [GreenDragon, RedDragon, BlackDragon, PinkTroll]
